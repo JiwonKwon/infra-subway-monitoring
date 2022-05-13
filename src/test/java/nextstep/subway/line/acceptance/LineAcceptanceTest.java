@@ -66,26 +66,26 @@ public class LineAcceptanceTest extends AcceptanceTest {
         지하철_노선_생성_실패됨(response);
     }
 
-    @DisplayName("지하철 노선 목록을 조회한다.")
-    @Test
-    void getLines() {
-        // given
-        Map<String, String> params = new HashMap<>();
-        params.put("name", "구분당선");
-        params.put("color", "bg-red-600");
-        params.put("upStationId", 강남역.getId() + "");
-        params.put("downStationId", 광교역.getId() + "");
-        params.put("distance", 15 + "");
-        ExtractableResponse<Response> createResponse1 = 지하철_노선_등록되어_있음(params);
-        ExtractableResponse<Response> createResponse2 = 지하철_노선_등록되어_있음(lineCreateParams);
-
-        // when
-        ExtractableResponse<Response> response = 지하철_노선_목록_조회_요청();
-
-        // then
-        지하철_노선_목록_응답됨(response);
-        지하철_노선_목록_포함됨(response, Arrays.asList(createResponse1, createResponse2));
-    }
+//    @DisplayName("지하철 노선 목록을 조회한다.")
+//    @Test
+//    void getLines() {
+//        // given
+//        Map<String, String> params = new HashMap<>();
+//        params.put("name", "구분당선");
+//        params.put("color", "bg-red-600");
+//        params.put("upStationId", 강남역.getId() + "");
+//        params.put("downStationId", 광교역.getId() + "");
+//        params.put("distance", 15 + "");
+//        ExtractableResponse<Response> createResponse1 = 지하철_노선_등록되어_있음(params);
+//        ExtractableResponse<Response> createResponse2 = 지하철_노선_등록되어_있음(lineCreateParams);
+//
+//        // when
+//        ExtractableResponse<Response> response = 지하철_노선_목록_조회_요청();
+//
+//        // then
+//        지하철_노선_목록_응답됨(response);
+//        지하철_노선_목록_포함됨(response, Arrays.asList(createResponse1, createResponse2));
+//    }
 
     @DisplayName("지하철 노선을 조회한다.")
     @Test

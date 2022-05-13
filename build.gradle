@@ -38,6 +38,9 @@ dependencies {
 	implementation("mysql:mysql-connector-java")
 
 	implementation("net.logstash.logback:logstash-logback-encoder:6.1")
+	testImplementation 'io.rest-assured:json-path:4.3.2'
+	testImplementation 'com.sun.xml.bind:jaxb-osgi:3.0.0-M5'
+
 }
 
 test {
